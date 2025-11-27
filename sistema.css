@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0, 0.2)), url(../html/fono.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Panel principal */
+.panel {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 50px 80px;
+    border-radius: 20px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    animation: aparecer 1s ease forwards;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px #4400ff, 0 0 25px #00eeff;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #dcdcdc;
+}
+
+/* Botón de login */
+#log {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#log:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #00c6ff;
+}
+
+/* Barra de menú */
+.menu-bar {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Cada contenedor de menú */
+.menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Checkbox oculto */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Botones principales del menú */
+.menu-btn {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    margin-left: 40px;
+}
+
+.menu-btn:hover {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    transform: scale(1.05);
+}
+
+/* Submenú oculto */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 15%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 10px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+    width: 170px;
+    text-align: center;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease forwards;
+    z-index: 10;
+}
+
+.submenu a {
+    display: block;
+    padding: 12px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.submenu a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Mostrar submenú solo del menú clickeado */
+    .menu-container input[type="checkbox"]:checked ~ .submenu {
+    display: block;
+}
+
+/* Animaciones */
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

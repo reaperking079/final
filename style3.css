@@ -1,0 +1,27 @@
+
+input{
+   
+    border-radius: 10px;
+    height: 25px;
+    width: 300px;
+    padding-left:7px;
+   
+}
+
+body{
+    text-align: center;
+    background-color: black;
+    
+}
+
+p{
+color: white;
+
+}
+
+button{
+    margin-top: 30px;
+    height: 25px;
+    width: 100px;
+    
+}

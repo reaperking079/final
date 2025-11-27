@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Autoadministrable</title>
+  <link rel="stylesheet" href="../css/sistema.css">
+</head>
+<body>
+  <button id="log">Log in</button>
+
+  <div class="panel">
+    <h1>PANEL AUTOADMINISTRABLE</h1>
+    <h2>Gestión del Sistema</h2>
+
+    <div class="menu-bar">
+      <!-- Materias -->
+      <div class="menu-container">
+        <input type="checkbox" id="materias">
+        <label for="materias" class="menu-btn">Materias ▼</label>
+        <div class="submenu">
+          <a href="alta.html">Altas</a>
+          <a href="baja.html">Bajas</a>
+          <a href="modificar.html">Modificación</a>
+          <a href="consultas.html">Consultas</a>
+        </div>
+      </div>
+
+      <!-- Profesores -->
+      <div class="menu-container">
+        <input type="checkbox" id="profesores">
+        <label for="profesores" class="menu-btn">Profesor ▼</label>
+        <div class="submenu">
+          <a href="#">Nombre</a>
+          <a href="#">Apellido</a>
+          <a href="#">Telefono</a>
+          <a href="#">Meil</a>
+        </div>
+      </div>
+
+      <!-- Cursos -->
+      <div class="menu-container">
+        <input type="checkbox" id="cursos">
+        <label for="cursos" class="menu-btn">Curso ▼</label>
+        <div class="submenu">
+          <a href="#">Numero</a>
+          <a href="#">Divicion</a>
+          <a href="#">Turno</a>
+          <a href="#">Horas</a>
+        </div>
+      </div>
+
+      <!-- Notificaciones -->
+      <div class="menu-container">
+        <input type="checkbox" id="notificaciones">
+        <label for="notificaciones" class="menu-btn">Notificación ▼</label>
+        <div class="submenu">
+          <a href="#">Ver</a>
+          <a href="#">Enviar</a>
+          <a href="#">Historial</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
